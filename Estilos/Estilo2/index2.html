@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <header>
+          <div class="logo">
+            <img src="img/logo.png" alt="logo">
+          </div>
+          <div class="buscador">
+            <select name="Barrio">
+                <option value="Barrio"disabled selected>-Selecciona tu barrio-</option>
+                <option value="Almagro">Almagro</option>
+                <option value="Balvanera">Balvanera</option>
+                <option value="Belgrano">Belgrano</option>
+                <option value="Colegiales">Colegiales</option>
+                <option value="Chacarita">Chacarita</option>
+                <option value="Coghlan">Coghlan</option>
+                <option value="Caballito">Caballito</option>
+                <option value="Flores">Flores</option>
+                <option value="Nueva Pompeya">Nueva Pompeya</option>
+                <option value="Palermo">Palermo</option>
+                <option value="San Telmo">San Telmo</option>
+                <option value="Versalles">Versalles</option>
+                <option value="Villa Luro">Villa Luro</option>
+            </select>
+          </div>
+          <div class="preguntas">
+            <a href="preguntas.html">Preguntas Frecuentes</a>
+          </div>
+          <div class="login">
+            <div class="links">
+              <a href="login.html">Login</a>
+            </div>
+            <div class="links">
+              <a href="registro.html">Registrarse</a>
+            </div>
+          </div>
+      </header>
+
+
+    <div class="carrousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/perro1wide.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/perro2wide.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/perro3wide.jpg" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
+
+    <div class="sidebar">
+      <div>
+        <nav>
+          <h3>Que estas buscando?</h3>
+          <ul>
+            <li><a href="#">Perdidos / Encontrados</a></li><br>
+            <li><a href="#">Adoptar</a></li><br>
+            <li><a href="#">Cuidador en Transito</a></li><br>
+            <li><a href="#">Paseadores</a></li><br>
+            <li><a href="#">Veterinarias</a></li><br>
+            <li><a href="#">Refugios</a></li><br>
+            <li><a href="#">Grupos de cruzas</a></li><br>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+          <div class="filtro">
+            <div>
+              <input id="encontrado" type="checkbox" name="filtro" value=""><span class="filtros"><label for="encontrado">Encontrados</label></span>
+            </div>
+            <div>
+              <input id="perdido" type="checkbox" name="filtro" value=""><span class="filtros"><label for="perdido">Perdidos</label></span>
+            </div>
+            <div>
+              <input id="adopcion" type="checkbox" name="filtro" value=""><span class="filtros"><label for="adopcion">En adopcion</label></span>
+          </div>
+          <div>
+            <button type="submit" name="button">Filtrar</button>
+        </div>
+        </div>
+
+        <main>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+          <div class="posteos">
+              <div class="estado">
+                <h3>Perdido</h3>
+              </div>
+              <div class="descripcion">
+                  <div class="foto-posteo">
+                      <img src="img/perro2.jpg" alt="Perro en adopcion">
+                  </div>
+                  <div class="detalles">
+                      <h4><u>Raza: </u></h4><h4>lalalalaal</h4>
+                      <h4><u>Zona: </u></h4><h4>lalalalala</h4>
+                      <h4><u>Fecha:</u> </h4><h4>23/12/19</h4>
+                      <a href="#">Ver más..</a>
+                  </div>
+              </div>
+          </div>
+        </main>
+
+        <aside>
+          <h4>Lista de Adopcion:</h4>
+          <div class="adopcion">
+            <img src="img/perro1.jpg" alt="Perro1">
+            <br>
+            <h6>Detalles</h6>
+          </div>
+          <div class="adopcion">
+            <img src="img/perro1.jpg" alt="Perro1">
+            <br>
+            <h6>Detalles</h6>
+          </div>
+          <div class="adopcion">
+            <img src="img/perro1.jpg" alt="Perro1">
+            <br>
+            <h6>Detalles</h6>
+          </div>
+          <div class="adopcion">
+            <img src="img/perro1.jpg" alt="Perro1">
+            <br>
+            <h6>Detalles</h6>
+          </div>
+        </aside>
+
+
+      </div>
+
+    </div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
