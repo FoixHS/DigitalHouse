@@ -42,7 +42,7 @@ body{
 /** CARROUSEL  */
 
 .carrousel{
-  borffder: solid 2px black;
+  border: solid 2px black;
   height: 60vh;
   padding: 5px;
 }
