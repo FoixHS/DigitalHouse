@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /**   HEADER  */
+
+  header{
+    padding: 3px 0;
+    background-color: #608491;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .logo img{
+    height: 310px;
+  }
+  .buscador select{
+    height: 100%;
+    margin: 0px 0;
+    width: 20vw;
+    border-radius: 8px;
+    color: grey;
+  }
+  .logo{
+    text-align: right;
+  }
+  .login{
+    display: flex;
+    width: 10vw;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .links a{
+    color: white;
+  }
+
+  .preguntas a{
+    color: white;
+    }
+  button a{
+    text-decoration: none;
+    color: black;
+  }
+
+  body{
+    background-image: url("img/bg-body.jpg");
+    font-family: 'Comfortaa', cursive;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
+
+  .loginbox {
+      margin-top: 5%;
+      width: 320px;
+      height: auto;
+      background: #608491;
+      color: #fff;
+      top:50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      padding: 30px 30px 15px 30px;
+  }
+
+.avatar {
+      width: 700px;
+      height: auto;
+      border-radius: 50%;
+      position: absolute;
+      top: -325px;
+      left: calc(-50% - 50px);
+  }
+
+ h1{
+     margin: 0;
+     padding: 0 0 20px;
+     text-align: center;
+     font-size: 22px;
+ }
+
+
+.PrimerLinea p{
+  display: inline-block;
+  width: 120px;
+}
+#margen{
+  margin-left: 7px;
+}
+.SegundaLinea input[type="name"]{
+  width: 49%;
+}
+
+ .loginbox p{
+     margin: 0;
+     padding: 0;
+     font-weight: bold;
+
+ }
+
+ .loginbox input {
+     width: 100%;
+     margin-bottom: 20px;
+
+ }
+
+ .loginbox input[type="email"], input[type="password"], input[type="name"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+  span{
+    color: white;
+   font-size: 12px;
+   line-height: 20px;
+  }
+  .loginbox input[type="checkbox"]
+ {
+   display: inline-block;
+   position: absolute;
+   width: 30px;
+   margin-top: 6px;
+ }
+
+ .loginbox input[type="submit"]:hover {
+     cursor: pointer;
+     background: #fff;
+     color: black;
+
+ }
+
+ .loginbox a {
+     font-size: 12px;
+     line-height: 20px;
+     color: white;
+ }
+.SextaLinea input{
+  width:30%;
+  margin-left: 10%;
+}
+.SeptimaLinea p{
+  margin-bottom: 12px;
+}
+.SeptimaLinea select{
+  margin-bottom: 28px;
+  height: 100%;
+  width: 13vw;
+  border-radius: 8px;
+  color: grey;
+}
+#terminos{
+  font-size: 12px;
+}

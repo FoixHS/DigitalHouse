@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="registracion.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <header>
+          <div class="logo">
+            <img src="img/logo.png" alt="logo">
+          </div>
+          <div class="buscador">
+            <select name="Barrio">
+                <option value="Barrio"disabled selected>-Selecciona tu barrio-</option>
+                <option value="Almagro">Almagro</option>
+                <option value="Balvanera">Balvanera</option>
+                <option value="Belgrano">Belgrano</option>
+                <option value="Colegiales">Colegiales</option>
+                <option value="Chacarita">Chacarita</option>
+                <option value="Coghlan">Coghlan</option>
+                <option value="Caballito">Caballito</option>
+                <option value="Flores">Flores</option>
+                <option value="Nueva Pompeya">Nueva Pompeya</option>
+                <option value="Palermo">Palermo</option>
+                <option value="San Telmo">San Telmo</option>
+                <option value="Versalles">Versalles</option>
+                <option value="Villa Luro">Villa Luro</option>
+            </select>
+          </div>
+          <div class="preguntas">
+            <a href="preguntas.html">Preguntas Frecuentes</a>
+          </div>
+          <div class="login">
+            <div class="links">
+              <a href="login.html">Login</a>
+            </div>
+            <div class="links">
+              <a href="registro.html">Registrarse</a>
+            </div>
+          </div>
+      </header>
+
+      <div class="loginbox">
+          <img src="img/logo.png" class="avatar">
+            <h1>BIENVENIDO!</h1>
+            <h6>Crea tu cuenta</h6>
+            <form>
+                <div class="PrimerLinea">
+                  <p>Nombre</p>
+                  <p id="margen">Apellido</p>
+                </div>
+                <div class="SegundaLinea">
+                  <input type="name" name="" placeholder="Ingrese aquí..">
+                  <input type="name" name="" placeholder="Ingrese aquí..">
+                </div>
+                <div class="TercerLinea">
+                  <p>Email</p>
+                  <input type="email" name="" placeholder="Correo electronico..">
+                </div>
+                <div class="CuartaLinea">
+                  <p>Contraseña</p>
+                  <input type="password" name="" placeholder="Ingrese su clave">
+                </div>
+                <div class="QuintaLinea">
+                  <p>Repita su contraseña</p>
+                  <input type="password" name="" placeholder="Ingrese nuevamente su clave">
+                </div>
+                <div class="SextaLinea">
+                  <p>Género</p>
+                  <input type="radio" name="" value="f">Femenino
+                  <input type="radio" name="" value="m">Masculino
+                  <input type="radio" name="" value="o">Otro
+                </div>
+                <div class="SeptimaLinea">
+                  <p>Nacionalidad</p>
+                    <select name="lugar" id="lugar" required>
+                      <option value="0" disabled selected>Por favor elija uno</option>
+                      <option value="1">Argentina</option>
+                      <option value="2">Brasil</option>
+                      <option value="3">Uruguay</option>
+                      <option value="4">Colombia</option>
+                      <option value="5">Chile</option>
+                      <option value="6">Peru</option>
+                      <option value="7">Paraguay</option>
+                      <option value="8">Bolivia</option>
+                      <option value="9">Venezuela</option>
+                </div>
+
+                <input type="submit" name="" value="Registrarse"> <br><br>
+                <p id="terminos">Al hacer clic en Registrarse, indicas que has leído y aceptas los <a href="#">Términos del servicio</a> y la <a href="#">Política de privacidad</a>.</p>
+            </form>
+      </div>
+
+    </body>
