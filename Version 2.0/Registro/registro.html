@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="registro.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <header>
+          <div class="logo">
+            <a href="../home/index.html">
+              <img src="img/logo2.png" alt="logo">
+            </a>
+          </div>
+
+          <div class="preguntas">
+            <a href="preguntas.html">Preguntas Frecuentes</a>
+          </div>
+
+      </header>
+
+      <h1>Ingrese sus datos:</h1>
+      <div class="loginbox">
+          <img src="img/logo2.png" class="avatar">
+            <form>
+                <div class="PrimeraLinea">
+                  <p id="nombre">Nombre</p>
+                  <p id="margen">Apellido</p>
+                </div>
+                <div class="SegundaLinea">
+                  <input type="name" name="" placeholder="Ingrese aquí..">
+                  <input type="name" name="" placeholder="Ingrese aquí..">
+                </div>
+                <div class="TerceraLinea">
+                  <p>Email</p>
+                  <input type="email" name="" placeholder="Correo electronico..">
+                </div>
+                <div class="CuartaLinea">
+                  <p>Contraseña</p>
+                  <input type="password" name="" placeholder="Ingrese su clave">
+                </div>
+                <div class="QuintaLinea">
+                  <p>Repita su contraseña</p>
+                  <input type="password" name="" placeholder="Ingrese nuevamente su clave">
+                </div>
+                <div class="SextaLinea">
+                  <p>Género</p>
+                  <input type="radio" name="genero" id="fem"value="f"><label for="fem">Femenino</label>
+                  <input type="radio" name="genero" id="masc"value="m"><label for="masc">Masculino</label>
+                  <input type="radio" name="genero" id="otro"value="o"><label for="otro">Otro</label>
+                </div>
+                <div class="SeptimaLinea">
+                  <p>Nacionalidad</p>
+                    <select name="lugar" id="lugar" required>
+                      <option value="0" disabled selected>Por favor elija su pais</option>
+                      <option value="1">Argentina</option>
+                      <option value="2">Brasil</option>
+                      <option value="3">Uruguay</option>
+                      <option value="4">Colombia</option>
+                      <option value="5">Chile</option>
+                      <option value="6">Peru</option>
+                      <option value="7">Paraguay</option>
+                      <option value="8">Bolivia</option>
+                      <option value="9">Venezuela</option>
+                </div>
+
+                <input type="submit" name="" value="Registrarse"> <br>
+                <p id="terminos">Al hacer clic en Registrarse, indicas que has leído y aceptas los <a href="#">Términos del servicio</a> y la <a href="#">Política de privacidad</a>.</p>
+            </form>
+      </div>
+
+    </body>
