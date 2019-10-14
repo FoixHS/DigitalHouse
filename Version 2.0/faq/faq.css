@@ -1,0 +1,136 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  html{
+      box-sizing: border-box;
+  }
+  /**   HEADER  */
+
+  header{
+    padding: 3px 0;
+    background-color: #608491;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .logo img{
+    height: 50px;
+  }
+  .buscador select{
+    height: 100%;
+    margin: 0px 0;
+    width: 20vw;
+    border-radius: 8px;
+    color: grey;
+  }
+  .logo{
+    text-align: right;
+  }
+  .login{
+    display: flex;
+    width: 10vw;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .links a{
+    color: white;
+  }
+
+  .preguntas a{
+    color: white;
+    }
+  button a{
+    text-decoration: none;
+    color: black;
+  }
+
+  /** faq */
+
+  section{
+      width: 100%;
+      height: 240vh;
+      background: url(img/bg-body.jpg);
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .container{
+      width: 100%;
+      max-width: 60rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+  }
+
+  .item-acordeon{
+      background-color: #608491;
+      border-radius: .4rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+  }
+
+  .link-acordeon{
+      font-size: 1.5rem;
+      color: rgba(255,255,255, .8);
+      text-decoration: none;
+      background-color: #608491;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:1rem 0;
+  }
+
+  .link-acordeon i{
+      color: #e7d5ff;
+      padding: .5rem;
+  }
+
+ .link-acordeon .ion-md-remove{
+      display: none;
+  }
+
+  .respuesta{
+      max-height: 0;
+      overflow: hidden;
+      position: relative;
+      background-color: #3c97b6;
+      transition: max-height 650ms;
+  }
+
+  .respuesta::before{
+      content: " ";
+      position: absolute;
+      width: .6rem;
+      height: 90%;
+      background-color: #8fc460;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+  }
+
+  .respuesta p{
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 2rem;
+  }
+
+  .item-acordeon:target .respuesta{
+      max-height: 20rem;
+  }
+
+.item-acordeon:target .link-acordeon .ion-md-add {
+      display: none;
+  }
+
+  .item-acordeon:target .link-acordeon .ion-md-remove {
+    display: block;
+}
