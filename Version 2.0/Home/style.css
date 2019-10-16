@@ -28,7 +28,7 @@ header{
   height: 30px;
 }
 .logo{
-  text-align: right;
+  margin-left: 10px;
 }
 .login{
   display: flex;
@@ -63,37 +63,28 @@ body{
 /** CARROUSEL  */
 
 .carrousel{
-  height: 400px;
+  height: 37.5vh;
   padding: 0px;
-  width: 1000px;
+  width: 75vw;
   margin: 10px auto;
   position: relative;
 }
 .carrousel img{
-  height: 400px;
-  width: 1000px;
+  height: 37.5vh;
+  width: 75vw;
 }
 .carrousel h3{
   text-align: center;
   width: 100%;
   color: white;
   background-color: black;
-  opacity: 0.4;
+  opacity: 0.6;
   position: absolute;
   bottom: 10%;
   font-size: 25px;
 }
 
-@media (max-width: 1530px) {
-    .carrousel{
-      height: 320px;
-      width: 800px;
-    }
-    .carrousel img{
-      height: 320px;
-      width: 800px;
-    }
-  }
+
 @media (max-width: 1100px) {
   .carrousel{
     display: none;
@@ -102,6 +93,16 @@ body{
     flex-direction: column;
 }
 }
+/*@media (max-width: 1530px) {
+    .carrousel{
+      height: 320px;
+      width: 800px;
+    }
+    .carrousel img{
+      height: 320px;
+      width: 800px;
+    }
+  }*/
 
 
 /** BODY */
@@ -133,7 +134,7 @@ nav ul li{
   tfddext-align: center;
 }
 
-@media (max-width: 1530px) {
+@media (max-width: 1325px) {
   .sidebar{
     display: none;
   }
@@ -148,7 +149,7 @@ nav ul li{
   align-items: center;
   justify-content: space-between;
   border-radius: 8px;
-  width: 70vw;
+  width: 75vw;
   margin: 0 auto;
   margin-top: 10px;
 }
@@ -178,7 +179,7 @@ nav ul li{
 main{
   display: flex;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 76vw;
   margin: 0 auto;
 }
 .estado h3{
@@ -191,8 +192,11 @@ main{
   margin: 4px auto;
 }
 .foto-posteo img{
-  height: 100%;
-  margin-left: 10%;
+  width: 12vw;
+  height: auto;
+  margin-left: 12%;
+  margin-top: 8%;
+  margin-bottom: 12%;
 }
 .descripcion{
   display: flex;
@@ -208,7 +212,6 @@ main{
   width: 32%;
   margin: 0 auto;
   margin-top: 15px;
-  border-radius: 20px;
   background-color: #91A5AC;
   padding: 3px;
 }
@@ -218,19 +221,26 @@ main{
 }
 @media (max-width: 1600px) {
   .foto-posteo img{
-    height: 80%;
-    margin: 5% auto;
+    width: 13vw;
+    height: auto;
   }
 }
 @media (max-width: 1300px) {
   .posteos{
     width: 45%;
   }
+  .foto-posteo img{
+    width: 14vw;
+    margin-left: 20%;
+    margin-top: 6%;
+  }
 }
 @media (max-width: 900px) {
   .foto-posteo img{
-    height: 60%;
-    margin: 5% auto;
+    width: 18vw;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 15%;
   }
 }
 @media (max-width: 768px) {
@@ -238,14 +248,21 @@ main{
     width: 100%;
   }
   .foto-posteo img{
-    height: 80%;
+    height: auto;
+    width: 27vw;
     margin-left: 20%;
+    margin-top: 3%;
+    margin-right: 0;
+    margin-bottom: 3%;
   }
 }
 @media (max-width: 490px) {
   .foto-posteo img{
-    height: 60%;
-    margin-left: 0%;
+    height: auto;
+    width: 43vw;
+    margin-left: 8%;
+    margin-bottom: 5%;
+    margin-top: 5%;
   }
 }
 /** ASIDE */
