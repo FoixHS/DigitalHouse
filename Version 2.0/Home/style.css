@@ -131,7 +131,7 @@ nav ul li{
   font-weight: bold;
   font-size: 25px;
   width: 10vw;
-  tfddext-align: center;
+  text-align: center;
 }
 
 @media (max-width: 1325px) {

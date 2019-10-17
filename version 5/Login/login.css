@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      font-family: 'Comfortaa', cursive;
+  }
+  /**   HEADER  */
+
+  header{
+    padding:0px 0;
+    background-color: #608491;
+    height: 50px;
+    overflow: hidden;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+  }
+  .logo img{
+    height: 50px;
+  }
+  .buscador{
+    display: none;
+  }
+  .buscador select{
+    height: 100%;
+    margin: 0px 0;
+    width: 20vw;
+    border-radius: 8px;
+    color: grey;
+  }
+  .logo{
+    float: left;
+    margin-left: 4.5vw;
+  }
+  .login{
+    display: none;
+    width: 10vw;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .links a{
+    color: white;
+  }
+.preguntas{
+  float: right;
+  margin-right: 10vw;
+  margin-top: 13px;
+}
+  .preguntas a{
+    color: white;
+    }
+  button a{
+    text-decoration: none;
+    color: black;
+  }
+
+
+  body{
+    background-image: url("img/bg-body.jpg");
+    font-family: 'Comfortaa', cursive;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
+
+  .loginbox {
+      width: 320px;
+      height: 450px;
+      background: #608491;
+      color: #fff;
+      top:50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      padding: 70px 30px;
+  }
+
+.avatar {
+      width: 700px;
+      height: auto;
+      border-radius: 50%;
+      position: absolute;
+      top: -325px;
+      left: calc(-50% - 50px);
+  }
+
+ h1{
+     margin: 0;
+     padding: 0 0 20px;
+     text-align: center;
+     font-size: 32px;
+     position: relative;
+     top: -25px;
+ }
+
+ .loginbox p{
+     margin: 0;
+     padding: 0;
+     font-weight: bold;
+
+ }
+
+ .loginbox input {
+     width: 100%;
+     margin-bottom: 20px;
+
+ }
+
+ .loginbox input[type="email"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+#pass{
+  text-decoration: underline;
+}
+  span{
+    color: white;
+   font-size: 12px;
+   line-height: 20px;
+  }
+  .loginbox input[type="checkbox"]
+ {
+   display: inline-block;
+   position: absolute;
+   width: 30px;
+   margin-top: 6px;
+ }
+
+ .loginbox input[type="submit"]:hover {
+     cursor: pointer;
+     background: #fff;
+     color: black;
+
+ }
+
+ .loginbox a {
+     text-decoration: none;
+     font-size: 12px;
+     line-height: 20px;
+     color: white;
+ }
+
+
+ @media (max-width: 490px) {
+   .loginbox {
+     font-family: 'Comfortaa', cursive;
+       margin-top: 0%;
+       width: 100vw;
+       height: 80%;
+     }
+}

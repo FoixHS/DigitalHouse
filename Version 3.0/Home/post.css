@@ -1,0 +1,34 @@
+/** POSTEOS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.posteos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid #111111;
+    width: 300px;
+}
+
+.foto-posteo img {
+    margin-top: 10px;
+    width: auto;
+    height: 200px;
+}
+.estado h3{
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #aec6cf;
+    background-color: #aec6cf;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.detalles{
+    text-align: center;
+}

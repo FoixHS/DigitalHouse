@@ -6,7 +6,7 @@
 /**   HEADER  */
 
 header{
-  padding: 3px 0;
+  padding: 3px 3px;
   background-color: #608491;
   height: 50px;
   display: flex;
@@ -54,24 +54,32 @@ button a{
 }
 
 body{
-  background-image: url("img/bg-body.jpg");
-  background-size: cover;
+ /* background-image: url("img/bg-body.jpg");*/
+ background: url(../../login2.0/img/bg3.png);
+  background-size: contain;
   background-position: center;
   font-family: 'Comfortaa', cursive;
 }
-
+@media (max-width: 500px) {
+  .preguntas{
+    display: none;
+  }
+  .logo{
+    display: none;
+  }
+}
 /** CARROUSEL  */
 
 .carrousel{
   height: 400px;
   padding: 0px;
-  width: 1000px;
+  width: 70vw;
   margin: 10px auto;
   position: relative;
 }
 .carrousel img{
   height: 400px;
-  width: 1000px;
+  width: 70vw;
 }
 .carrousel h3{
   text-align: center;
@@ -84,7 +92,7 @@ body{
   font-size: 25px;
 }
 
-@media (max-width: 1530px) {
+@medddia (max-width: 1530px) {
     .carrousel{
       height: 320px;
       width: 800px;
@@ -109,10 +117,13 @@ body{
 /** NAV */
 nav ul li a {
   color: rgba(0, 0, 0);
-  font-size: 20px;
-  text-decoration: underline;
+  font-size: 15px;
 }
 
+/*nav ul {
+  border: 1px solid #E4F4FD;
+  background: #E4F4FD;
+}*/
 .sidebar nav{
   padding: 10px;
   margin-left: 5px;
@@ -122,18 +133,25 @@ nav ul li a {
   color: rgba(0, 0, 0);
 }
 nav ul li{
-  width: 8vw;
-  margin-left: 5px;
+  width: 70%;
+  margin-left: 15px;
+  border: 1px solid #111111;
   list-style: none;
+  text-align: center;
 }
-.sidebar nav h3{
-  font-weight: bold;
-  font-size: 25px;
-  width: 10vw;
-  tfddext-align: center;
+nav ul li a{
+  color: #111111;
 }
 
-@media (max-width: 1530px) {
+.sidebar nav h3{
+  font-weight: bold;
+  font-size: 20px;
+  width: 160px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+@media (max-width: 1100px) {
   .sidebar{
     display: none;
   }
@@ -142,18 +160,20 @@ nav ul li{
 
 /** FILTROS */
 .filtro{
-  background-color: #91A5AC;
+  background-color: #79A8C1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  border-radius: 8px;
+  border-radius: 0px;
   width: 70vw;
+  height: 70px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 .filtro label{
   margin: 0;
+  color: #FFFFFF;
 }
 .filtro div{
   margin: 0 5px;
@@ -178,74 +198,91 @@ nav ul li{
 main{
   display: flex;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 50%;
   margin: 0 auto;
-}
-.estado h3{
-  font-size: 20px;
-  text-align: center;
-  border: solid 1px black;
-  background-color: #9A6965 ;
-  border-radius: 20px;
-  width: 70%;
-  margin: 4px auto;
-}
-.foto-posteo img{
-  height: 100%;
-  margin-left: 10%;
-}
-.descripcion{
-  display: flex;
-  flex-direction: row;
-}
-.descripcion .foto-posteo{
-  flex: 2;
-}
-.descripcion .detalles{
-  flex:1;
+  justify-content: space-around;
+  margin-top: 60px;
 }
 .posteos{
-  width: 32%;
-  margin: 0 auto;
-  margin-top: 15px;
-  border-radius: 20px;
-  background-color: #91A5AC;
-  padding: 3px;
+  border: 2px solid #111111;
+  margin-bottom: 60px;
+  height: 450px;
 }
-.detalles a{
-  color: grey;
-  text-decoration: underline;
+strong{
+  font-size: 18px;
+}
+.foto-posteo img {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.estado {
+  width: 80%;
+  margin-left: 30px;
+}
+.estado h3{
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #aec6cf;
+  background-color: #aec6cf;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.detalles{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (max-width: 1600px) {
   .foto-posteo img{
     height: 80%;
-    margin: 5% auto;
+    margin-top: 2%;
+    margin-left: 8%;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1480px) {
   .posteos{
     width: 45%;
   }
-}
-@media (max-width: 900px) {
   .foto-posteo img{
-    height: 60%;
-    margin: 5% auto;
+    margin-left: 12%;
+    height: 70%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
+  .foto-posteo img{
+    height: 60%;
+    margin: 0 auto;
+    margin-top: 20%;
+    margin-left: 10%;
+  }
+}
+@media (max-width: 940px) {
   .posteos{
     width: 100%;
   }
   .foto-posteo img{
     height: 80%;
     margin-left: 20%;
+    margin-top: 8%;
   }
 }
-@media (max-width: 490px) {
+@media (max-width: 545px) {
   .foto-posteo img{
     height: 60%;
-    margin-left: 0%;
+    margin-left: 20%;
+    margin-top: 8%;
+  }
+}
+@media (max-width: 435px) {
+  .foto-posteo img{
+    height: 40%;
+    margin-left: 20%;
+    margin-top: 8%;
   }
 }
 /** ASIDE */
