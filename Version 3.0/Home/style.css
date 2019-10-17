@@ -70,14 +70,14 @@ body{
 /** CARROUSEL  */
 
 .carrousel{
-  height: 400px;
+  height: 40vh;
   padding: 0px;
   width: 70vw;
   margin: 10px auto;
   position: relative;
 }
 .carrousel img{
-  height: 400px;
+  height: 40vh;
   width: 70vw;
 }
 .carrousel h3{
@@ -85,13 +85,13 @@ body{
   width: 100%;
   color: white;
   background-color: black;
-  opacity: 0.4;
+  opacity: 0.6;
   position: absolute;
   bottom: 10%;
   font-size: 25px;
 }
 
-@medddia (max-width: 1530px) {
+/*@medddia (max-width: 1530px) {
     .carrousel{
       height: 320px;
       width: 800px;
@@ -100,7 +100,7 @@ body{
       height: 320px;
       width: 800px;
     }
-  }
+  }*/
 @media (max-width: 1100px) {
   .carrousel{
     display: none;
@@ -198,8 +198,11 @@ main{
   margin: 4px auto;
 }
 .foto-posteo img{
-  height: 90%;
-  margin-left: 10%;
+  height: auto;
+  margin-left: 6%;
+  width: 13vw;
+  margin-top: 6%;
+  margin-bottom: 6%
 }
 .descripcion{
   display: flex;
@@ -223,53 +226,53 @@ main{
   text-decoration: underline;
 }
 
-@media (max-width: 1600px) {
-  .foto-posteo img{
-    height: 80%;
-    margin-top: 2%;
-    margin-left: 8%;
-  }
-}
+
 @media (max-width: 1480px) {
   .posteos{
     width: 45%;
   }
   .foto-posteo img{
-    margin-top: 20%;
-    margin-left: 10%;
-    height: 70%;
+    margin-top: 3vh;
+    margin-left: 13%;
+    height: auto;
+    width: 16vw;
+    margin-bottom: 3vh;
   }
 }
-@media (max-width: 1050px) {
-  .foto-posteo img{
-    height: 60%;
-    margin: 0 auto;
-    margin-top: 20%;
-    margin-left: 10%;
-  }
-}
-@media (max-width: 940px) {
+
+@media (max-width: 1020px) {
   .posteos{
     width: 100%;
   }
   .foto-posteo img{
-    height: 80%;
-    margin-left: 20%;
-    margin-top: 8%;
+    height: auto;
+    margin-left: 26%;
+    margin-top: 4%;
+    width: 20vw;
   }
 }
-@media (max-width: 545px) {
+@media (max-width: 800px) {
   .foto-posteo img{
-    height: 60%;
+    height: auto;
     margin-left: 20%;
-    margin-top: 8%;
+    margin-top: 4%;
+    width: 25vw;
   }
 }
-@media (max-width: 435px) {
+@media (max-width: 600px) {
   .foto-posteo img{
-    height: 40%;
-    margin-left: 20%;
-    margin-top: 8%;
+    height: auto;
+    margin-left: 17%;
+    margin-top: 4%;
+    width: 30vw;
+  }
+}
+@media (max-width: 460px) {
+  .foto-posteo img{
+    height: auto;
+    margin-left: 13%;
+    margin-top: 18%;
+    width: 33vw;
   }
 }
 /** ASIDE */
