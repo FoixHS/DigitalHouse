@@ -63,7 +63,7 @@
 
   section{
       width: 100%;
-      background: url(../../login2.0/img/bg.png);
+      background: url(img/bg-body.jpg);
       background-size: cover;
       display: flex;
       align-items: center;
@@ -79,7 +79,7 @@
   }
 
   .item-acordeon{
-      background-color: #fff;
+      background-color: #608491;
       border-radius: .4rem;
       margin-bottom: 1rem;
       padding: 1rem;
@@ -88,9 +88,9 @@
 
   .link-acordeon{
       font-size: 1.5rem;
-      color: rgb(0, 0, 0);
+      color: rgba(255,255,255, .8);
       text-decoration: none;
-      background-color: #fff;
+      background-color: #608491;
       width: 100%;
       display: flex;
       align-items: center;
@@ -114,8 +114,7 @@
       max-height: 0;
       overflow: hidden;
       position: relative;
-      background-color: #fff;
-      border: 1px solid #111111;
+      background-color: #3c97b6;
       transition: max-height 650ms;
   }
 
@@ -132,7 +131,7 @@
 
   .respuesta p{
     font-size: 1.4rem;
-    color: #111111;
+    color: #fff;
     padding: 2rem;
   }
 

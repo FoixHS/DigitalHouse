@@ -54,8 +54,7 @@ button a{
 }
 
 body{
- /* background-image: url("img/bg-body.jpg");*/
- /*background: url(../../login2.0/img/bg.png);*/
+  background-image: url("img/bg-body.jpg");
   background-size: cover;
   background-position: center;
   font-family: 'Comfortaa', cursive;
@@ -118,6 +117,7 @@ body{
 nav ul li a {
   color: rgba(0, 0, 0);
   font-size: 20px;
+  text-decoration: underline;
 }
 
 .sidebar nav{
