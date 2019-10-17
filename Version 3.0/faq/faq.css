@@ -102,6 +102,9 @@
       color: #e7d5ff;
       padding: .5rem;
   }
+  .link-acordeon:hover{
+    color: white;
+  }
 
  .link-acordeon .ion-md-remove{
       display: none;
