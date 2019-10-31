@@ -1,3 +1,5 @@
+@import url("../header.css");
+
 *,*::before,*::after{
     margin: 0;
     padding: 0;
@@ -7,60 +9,14 @@
   html{
       box-sizing: border-box;
   }
-  /**   HEADER  */
-
-  header{
-    padding: 3px;
-    background-color: #608491;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .logo img{
-    height: 50px;
-  }
-  .buscador select{
-    height: 100%;
-    margin: 0px 0;
-    width: 20vw;
-    border-radius: 8px;
-    color: grey;
-  }
-  .buscador{
-    height: 30px;
-  }
-  .logo{
-    text-align: right;
-  }
-  .login{
-    display: flex;
-    width: 20vw;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-    margin-left: 1%;
-  }
-  .links a{
-    color: white;
-  }
-  .preguntas{
-    width: 20vw;
-  }
-  .preguntas a{
-    color: white;
-    }
-  button a{
-    text-decoration: none;
-    color: black;
-  }
-  body{
-    font-family: 'Comfortaa', cursive;
-  }
-
   /** faq */
 
+h2.titulo{
+    display: flex;
+    justify-content: center;
+    font-family: monserrat,sans-serif;
+    margin-top: 20px;
+  }
   section{
       width: 100%;
       background: url(../../login2.0/img/bg2.png);
