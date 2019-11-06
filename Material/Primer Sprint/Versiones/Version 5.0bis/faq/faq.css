@@ -1,0 +1,102 @@
+@import url("../header.css");
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  html{
+      box-sizing: border-box;
+  }
+  /** faq */
+
+h2.titulo{
+    display: flex;
+    justify-content: center;
+    font-family: monserrat,sans-serif;
+    margin-top: 20px;
+  }
+  section{
+      width: 100%;
+      background: url(../../login2.0/img/bg2.png);
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .container{
+      width: 100%;
+      max-width: 60rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      margin-top: 30px;
+  }
+
+  .item-acordeon{
+      background-color: #fff;
+      border-radius: .4rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+  }
+
+  .link-acordeon{
+      font-size: 1.5rem;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      background-color: #fff;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:1rem 0;
+  }
+
+  .link-acordeon i{
+      color: #e7d5ff;
+      padding: .5rem;
+  }
+
+ .link-acordeon .ion-md-remove{
+      display: none;
+  }
+
+  .respuesta{
+      max-height: 0;
+      overflow: hidden;
+      position: relative;
+      background-color: #fff;
+      border: 1px solid #111111;
+      transition: max-height 650ms;
+  }
+
+  .respuesta::before{
+      content: " ";
+      position: absolute;
+      width: .6rem;
+      height: 90%;
+      background-color: #8fc460;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+  }
+
+  .respuesta p{
+    font-size: 1.4rem;
+    color: #111111;
+    padding: 2rem;
+  }
+
+  .item-acordeon:target .respuesta{
+      max-height: 20rem;
+  }
+
+.item-acordeon:target .link-acordeon .ion-md-add {
+      display: none;
+  }
+
+  .item-acordeon:target .link-acordeon .ion-md-remove {
+    display: block;
+}

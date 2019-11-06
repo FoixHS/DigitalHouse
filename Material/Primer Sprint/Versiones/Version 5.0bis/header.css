@@ -1,0 +1,119 @@
+/* HEADER*/
+.color{
+  background-color: #608491;
+  height: 6vh;
+}
+.navbar-dark .navbar-nav .nav-link{
+  border: 1px white solid;
+  border-radius: 6px;
+}
+.disable{
+  color: #c1c1c1;
+  font-size: .8em;
+}
+.disable:hover{
+  color: #c1c1c1;
+  background: white;
+  font-size: .8em;
+}
+.able:hover{
+ background-color: #608491;
+ color:white;
+}
+.navbar-dark .navbar-nav .separar1{
+ margin-left: 25%;
+ width: 5vw;
+}
+.navbar-dark .navbar-nav .separar2{
+   margin-left: 25%;
+   width: 11vw;
+}
+@media(max-width: 1828px){
+ .navbar-dark .navbar-nav .separar1{
+   margin-left: 25%;
+   width: 6vw;
+ }
+ .navbar-dark .navbar-nav .separar2{
+     margin-left: 25%;
+     width: 12vw;
+ }
+}
+@media(max-width: 1675px){
+ .navbar-dark .navbar-nav .separar2{
+     margin-left: 25%;
+     width: 13vw;
+ }
+}
+@media(max-width: 1546px){
+ .navbar-dark .navbar-nav .separar2{
+     margin-left: 25%;
+     width: 14vw;
+ }
+ .navbar-dark .navbar-nav .separar1{
+   margin-left: 25%;
+   width: 7vw;
+ }
+}
+@media(max-width: 1436px){
+ .navbar-dark .navbar-nav .separar2{
+     margin-left: 25%;
+     width: 15vw;
+ }
+}
+@media (max-width: 1340px){
+  .navbar-dark .navbar-nav .separar2{
+     margin-left: 25%;
+     width: 17vw;
+     padding-left: 8%;
+   }
+   .navbar-dark .navbar-nav .separar1{
+     margin-left: 30%;
+   }
+}
+@media (max-width: 1234px){
+ .navbar-dark .navbar-nav .separar2{
+    width: 18vw;
+  }
+  .navbar-dark .navbar-nav .separar1{
+    width:8vw;
+  }
+}
+@media (max-width: 1165px){
+ .navbar-dark .navbar-nav .separar2{
+    width: 19vw;
+  }
+}
+@media (max-width: 1104px){
+ .navbar-dark .navbar-nav .separar2{
+    width: 20vw;
+  }
+  .navbar-dark .navbar-nav .separar1{
+    width:9vw;
+  }
+}
+@media(max-width: 1049px){
+ .navbar-dark .navbar-nav .separar2{
+    width: 21vw;
+  }
+}
+@media(max-width: 999px){
+ .navbar-dark .navbar-nav .separar2{
+    width: 22vw;
+  }
+}
+@media(max-width: 991px){
+ .logo{
+   width: 7vw;
+   height: 4vh;
+ }
+}
+@media(max-width: 825px){
+ .logo{
+   width: 8vw;
+ }
+}
+@media(max-width: 500px){
+ .logo{
+   width: 9vw;
+ }
+}
