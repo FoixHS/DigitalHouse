@@ -2,6 +2,7 @@
 <<?php
 
 session_start();
+require_once '../funciones.php';
 
 $errorNombre = "";
 $errorEmail = "";
@@ -26,6 +27,9 @@ if($_POST){
   } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
     $errorEmail = "*Se requiere formato de email";
     $errores = true;
+  }else if(validarEmail($email)){
+    $errorEmail = "*El email ya fue utilizado";
+    $errores = true;
   }
 
   if($pass1 == ""){
@@ -46,8 +50,7 @@ if($_POST){
   }
 
   if(!$errores){
-    $datosEnJSON = file_get_contents("usuarios.json");
-    $arrayDeUsuarios = json_decode($datosEnJSON, true);
+    $arrayDeUsuarios = traerArrayDeUsuarios();
     $nuevoUsuario = [
       "nombre" => $nombre,
       "email" => $email,
@@ -56,8 +59,9 @@ if($_POST){
     ];
     $arrayDeUsuarios[] = $nuevoUsuario;
     $datosEnJSON = json_encode($arrayDeUsuarios);
-    file_put_contents("usuarios.json", $datosEnJSON);
-    //header("Location:../Home/index.php");
+    file_put_contents("../usuarios.json", $datosEnJSON);
+    $_SESSION["usuario_logueado"] = $email;
+    header("Location:../login/login.php");
   }
 
 }
