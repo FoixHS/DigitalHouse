@@ -1,5 +1,6 @@
 <?php
 
+
   function traerArrayDeUsuarios(){
     $datosEnJSON = file_get_contents("../usuarios.json");
     $arrayDeUsuarios = json_decode($datosEnJSON, true);

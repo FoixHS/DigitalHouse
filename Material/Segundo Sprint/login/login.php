@@ -5,21 +5,30 @@ require_once '../funciones.php';
 
 $errorLogin = "";
 $arrayDeUsuarios = traerArrayDeUsuarios();
+$errorEmail = "";
 
 if($_POST){
 $email = $_POST["email"];
 $pass = $_POST["password"];
 
+if($email == ""){
+  $errorEmail = "*El email es obligatorio";
+  $errores = true;
+} else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+  $errorEmail = "*Se requiere formato de email";
+  $errores = true;
+}
+
 foreach ($arrayDeUsuarios as $usuario) {
    if($usuario["email"] == $email && password_verify($pass, $usuario["contrasenia"])){
+      $_SESSION["usuario"] = $email;
       header("Location:../Home/index.php");
    } else{
      $errorLogin = "*El email o la contraseña son incorrectas";
    }
 }
-
-
 }
+
 
  ?>
 <html lang="en">
@@ -34,7 +43,7 @@ foreach ($arrayDeUsuarios as $usuario) {
 <body>
     <header>
         <div class="logo">
-          <a href="../home/index.html">
+          <a href="../home/index.php">
             <img src="img/logo2.png" alt="logo">
           </a>
         </div>
@@ -61,9 +70,8 @@ foreach ($arrayDeUsuarios as $usuario) {
         </div>
         </div>
     </header>
+
 <main>
-
-
     <div class="container" id="container" style="
   height: 55vh">
         <div class="form-container sign-up-container">
@@ -90,7 +98,7 @@ foreach ($arrayDeUsuarios as $usuario) {
               <a href="#" class="social icon-instagram"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <span style="color: red"><?=$errorLogin?></span>
-            <input type="email" name="email" placeholder="Email" />
+            <input type="email" name="email" placeholder="Email" /> <span><?=$errorEmail?></span>
             <input type="password" name="password" placeholder="Contraseña" />
             <a href="#">Olvidaste tu contraseña?</a>
             <button>Iniciar Sesión</button>
@@ -110,7 +118,7 @@ foreach ($arrayDeUsuarios as $usuario) {
                 </div>
             </div>
         </div>
-    </div
+    </div>
   </main>
 
 

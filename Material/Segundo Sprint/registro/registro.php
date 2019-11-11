@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<<?php
+<?php
 
 session_start();
 require_once '../funciones.php';
@@ -8,6 +8,8 @@ $errorNombre = "";
 $errorEmail = "";
 $errorPass1 = "";
 $errorPass2 = "";
+$nombre = "";
+$email = "";
 
 if($_POST){
   $nombre = $_POST["nombre"];
@@ -80,7 +82,7 @@ if($_POST){
 <body>
     <header>
         <div class="logo">
-          <a href="../home/index.html">
+          <a href="../home/index.php">
             <img src="img/logo2.png" alt="logo">
           </a>
         </div>
@@ -111,7 +113,7 @@ if($_POST){
 
   <main>
       <div class="container" id="container" style="
-    height: 65vh">
+    height: 75vh">
             <div class="form-container sign-in-container">
               <form action="registro.php" method="POST">
                   <h1>Registrate</h1>
@@ -120,18 +122,19 @@ if($_POST){
                     <a href="#" class="social icon-twitter"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social icon-instagram"><i class="fab fa-linkedin-in"></i></a>
                   </div>
-                  <input type="text" name="nombre" placeholder="Nombre" />
+                  <input type="text" name="nombre" placeholder="Nombre y Apellido" value=<?=$nombre?>>
                   <br>
                   <span><?=$errorNombre?></span>
-                  <input type="email" name="email" placeholder="Email" />
+                  <input type="email" name="email" placeholder="Email" value=<?=$email?> >
                   <br>
                   <span><?=$errorEmail?></span>
-                  <input type="password" name="pass1" placeholder="Contraseña" />
+                  <input type="password" name="pass1" placeholder="Contraseña" >
                   <br>
                   <span><?=$errorPass1?></span>
                   <input type="password" name="pass2" placeholder="Repita contraseña">
                   <br>
                   <span><?=$errorPass2?></span>
+                  <br>
                   <button type="submit">Registrate</button>
               </form>
             </div>

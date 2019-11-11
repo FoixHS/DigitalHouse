@@ -12,7 +12,7 @@
   <body>
       <header>
           <div class="logo">
-            <a href="../home/index.html">
+            <a href="../home/index.php">
               <img src="img/logo2.png" alt="logo">
             </a>
           </div>

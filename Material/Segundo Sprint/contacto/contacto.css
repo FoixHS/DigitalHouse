@@ -72,12 +72,8 @@ body{
 /* iconos */
 
 .container{
-  position: absolute;
-  width: 100%;
-  top: 130%;
-  left: 7%;
-  transform: translateY(-50%);
-  text-align: center;
+  display: flex;
+
   font-family: "Montserrat", sans-serif;
 }
 .contact-method{
@@ -113,5 +109,3 @@ body{
 .contact-method:hover i{
   transform: translateY(-40px);
 }
-
-

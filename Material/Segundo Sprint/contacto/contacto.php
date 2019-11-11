@@ -67,18 +67,22 @@
         </div>
         <a class="btn" href="#">Enviar</a>
       </div>
+
       <div class="container">
-        <div class="contact-method">
-          <i class="fas fa-envelope"></i>
-          <span>perros@gmail.com</span>
+        <div class="container-elements">
+            <div class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <span>perros@gmail.com</span>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-mobile-alt"></i>
+              <span>+54 1234 5678</span>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Lima 1111</span>
+            </div>
         </div>
-        <div class="contact-method">
-          <i class="fas fa-mobile-alt"></i>
-          <span>+54 1234 5678</span>
-        </div>
-        <div class="contact-method">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Lima 1111</span>
-        </div>
+      </div>
   </body>
 </html>

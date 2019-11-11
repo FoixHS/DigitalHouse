@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <?php
+session_start();
+require_once '../funciones.php';
 include('posteos.php');
-require_once('../funciones.php');
-//SoloSiEstaLogueado();
+
+$arrayDeUsuarios = traerArrayDeUsuarios();
+
+foreach ($arrayDeUsuarios as $usuario) {
+  if($usuario["email"]==$_SESSION["usuario"]){
+    $usuarioLogueado = $usuario;
+    break;
+  } else {
+    header("Location:../login/login.php");
+  }
+}
+
 
  ?>
 <html lang="en" dir="ltr">
@@ -17,7 +29,7 @@ require_once('../funciones.php');
   <body>
       <header>
           <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
               <img src="img/logo2.png" alt="logo">
             </a>
           </div>
@@ -44,11 +56,9 @@ require_once('../funciones.php');
           </div>
           <div class="login">
             <div class="links">
-              <a href="../login/login.php">Login</a>
+              <a href="../perfil/perfil.php">Mi Perfil: <?=$usuarioLogueado["nombre"]?></a>
             </div>
-            <div class="links">
-              <a href="../registro/registro.php">Registrarse</a>
-            </div>
+
           </div>
       </header>
 
@@ -95,7 +105,7 @@ require_once('../funciones.php');
             <li><a href="#">Veterinarias</a></li><br>
             <li><a href="#">Refugios</a></li><br>
             <li><a href="#">Servicios</a></li><br>
-            <li><a href="../contacto/contacto.html">Contactanos</a></li><br>
+            <li><a href="../contacto/contacto.php">Contactanos</a></li><br>
           </ul>
         </nav>
       </div>
