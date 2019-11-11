@@ -11,17 +11,9 @@ if($_POST){
 $email = $_POST["email"];
 $pass = $_POST["password"];
 
-if($email == ""){
-  $errorEmail = "*El email es obligatorio";
-  $errores = true;
-} else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-  $errorEmail = "*Se requiere formato de email";
-  $errores = true;
-}
-
 foreach ($arrayDeUsuarios as $usuario) {
    if($usuario["email"] == $email && password_verify($pass, $usuario["contrasenia"])){
-      $_SESSION["usuario"] = $email;
+      $_SESSION["usuario_logueado"] = $email;
       header("Location:../Home/index.php");
    } else{
      $errorLogin = "*El email o la contraseña son incorrectas";
