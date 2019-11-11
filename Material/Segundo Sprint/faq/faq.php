@@ -35,14 +35,14 @@
             </select>
           </div>
           <div class="preguntas">
-            <a href="faq.html">Preguntas Frecuentes</a>
+            <a href="faq.php">Preguntas Frecuentes</a>
           </div>
           <div class="login">
             <div class="links">
-              <a href="../login2.0/login2-0.html">Login</a>
+              <a href="../login/login.php">Login</a>
             </div>
             <div class="links">
-              <a href="../registro2.0/registro.html">Registrarse</a>
+              <a href="../registro/registro.php">Registrarse</a>
             </div>
           </div>
       </header>
@@ -123,7 +123,7 @@
                     </a>
                     <div class="respuesta">
                         <p>
-                            El tránsito es un tiempo necesario para que los Organismos intervinientes implementen las estrategias para que la mascota pueda volver con su familia de origen o familia ampliada, o bien -en el caso de no poder revertirse la situación de riesgo- declarar al animal en situación de adoptabilidad, y así elegir una nueva familia para él o ella. 
+                            El tránsito es un tiempo necesario para que los Organismos intervinientes implementen las estrategias para que la mascota pueda volver con su familia de origen o familia ampliada, o bien -en el caso de no poder revertirse la situación de riesgo- declarar al animal en situación de adoptabilidad, y así elegir una nueva familia para él o ella.
                         </p>
                     </div>
                 </div>

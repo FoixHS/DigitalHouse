@@ -57,7 +57,7 @@ foreach ($arrayDeUsuarios as $usuario) {
           </select>
         </div>
         <div class="preguntas">
-          <a href="../faq/faq.html">Preguntas Frecuentes</a>
+          <a href="../faq/faq.php">Preguntas Frecuentes</a>
         </div>
         </div>
     </header>
@@ -106,7 +106,7 @@ foreach ($arrayDeUsuarios as $usuario) {
                 <div class="overlay-panel overlay-right">
                   <h1>Hola, Pet-amigo!</h1>
                   <p>Ingresa tus datos personales y comienza una aventura con nosotros</p>
-                  <a href="../registro2.0/registro.html"><button class="ghost" id="signUp">Registrate</button></a>
+                  <a href="../registro/registro.php"><button class="ghost" id="signUp">Registrate</button></a>
                 </div>
             </div>
         </div>

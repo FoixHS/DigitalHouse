@@ -103,7 +103,7 @@ if($_POST){
           </select>
         </div>
         <div class="preguntas">
-          <a href="../faq/faq.html">Preguntas Frecuentes</a>
+          <a href="../faq/faq.php">Preguntas Frecuentes</a>
         </div>
         </div>
     </header>
@@ -140,7 +140,7 @@ if($_POST){
                       <div class="overlay-panel overlay-right">
                           <h1>Bienvenido!</h1>
                           <p>Para seguir conectado, por favor inicia sesión con tus datos</p>
-                          <a href="../login2.0/login2-0.html"><button class="ghost" id="signUp">Inicia Sesión </button></a>
+                          <a href="../login/login.php"><button class="ghost" id="signUp">Inicia Sesión </button></a>
                       </div>
                 </div>
             </div>
