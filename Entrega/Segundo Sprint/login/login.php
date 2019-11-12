@@ -2,7 +2,7 @@
 <?php
 session_start();
 require_once '../funciones.php';
-SoloSiEstaLogueado();
+  soloSiEstaLogueado();
 $errorLogin = "";
 $arrayDeUsuarios = traerArrayDeUsuarios();
 $errorEmail = "";

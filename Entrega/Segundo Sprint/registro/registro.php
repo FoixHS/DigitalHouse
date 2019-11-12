@@ -3,7 +3,7 @@
 
 session_start();
 require_once '../funciones.php';
-
+    soloSiEstaLogueado();
 $errorNombre = "";
 $errorEmail = "";
 $errorPass1 = "";
@@ -59,8 +59,8 @@ if($_POST){
       $errorFoto="Hubo un error al cargar la foto";
     }else{
       $ext = pathinfo($_FILES["avatar"]["name"],PATHINFO_EXTENSION);
-      if($ext!="jpg"){
-        $errorFoto="La foto debe ser un archivo jpg";
+      if($ext!="jpg" && $ext!="jpeg" && $ext!="png"){
+        $errorFoto="La foto debe ser un archivo jpg, jpeg o png";
       }else{
         move_uploaded_file($_FILES["avatar"]["tmp_name"], "../avatar/$emailCorto." . $ext);
       }
@@ -130,7 +130,7 @@ if($_POST){
 
   <main>
       <div class="container" id="container" style="
-    height: 75vh">
+    height: 90vh">
             <div class="form-container sign-in-container">
               <form action="registro.php" method="POST" enctype="multipart/form-data">
                   <h1>Registrate</h1>
@@ -140,18 +140,19 @@ if($_POST){
                     <a href="#" class="social icon-instagram"><i class="fab fa-linkedin-in"></i></a>
                   </div>
                   <input type="text" name="nombre" placeholder="Nombre y Apellido" value=<?=$nombre?>>
-                  <br>
+
                   <span><?=$errorNombre?></span>
                   <input type="email" name="email" placeholder="Email" value=<?=$email?> >
-                  <br>
+
                   <span><?=$errorEmail?></span>
                   <input type="password" name="pass1" placeholder="Contraseña" >
-                  <br>
+
                   <span><?=$errorPass1?></span>
                   <input type="password" name="pass2" placeholder="Repita contraseña">
-                  <br>
+
                   <span><?=$errorPass2?></span>
-                  <br>
+
+                  <h5>Foto de Perfil:</h5>
                   <input type="file" name="avatar" accept="image/png, image/jpeg">
                   <br>
                   <span><?=$errorFoto?></span>

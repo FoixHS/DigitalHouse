@@ -17,10 +17,14 @@
     }
   }
 
-  function SoloSiEstaLogueado(){
+  function soloSiEstaLogueado(){
+    if(isset($_SESSION["usuario_logueado"])){
+      header("Location:../home/index.php");
+    }
+  }
+  function siNoEstaLogueado(){
     if(!isset($_SESSION["usuario_logueado"])){
       header("Location:../login/login.php");
     }
   }
-
  ?>

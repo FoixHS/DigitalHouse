@@ -6,14 +6,7 @@ include('posteos.php');
 
 $arrayDeUsuarios = traerArrayDeUsuarios();
 
-foreach ($arrayDeUsuarios as $usuario) {
-  if($usuario["email"]==$_SESSION["usuario_logueado"]){
-    $usuarioLogueado = $usuario;
-    break;
-  } else {
-    header("Location:../login/login.php");
-  }
-}
+siNoEstaLogueado();
 
 
  ?>
@@ -56,7 +49,7 @@ foreach ($arrayDeUsuarios as $usuario) {
           </div>
           <div class="login">
             <div class="links">
-              <a href="../perfil/perfil.php">Mi Perfil: <?=$usuarioLogueado["nombre"]?></a>
+              <a href="../perfil/perfil.php">Mi Perfil: <?=$_SESSION["usuario_logueado"]?></a>
             </div>
 
           </div>
@@ -105,7 +98,7 @@ foreach ($arrayDeUsuarios as $usuario) {
             <li><a href="#">Veterinarias</a></li><br>
             <li><a href="#">Refugios</a></li><br>
             <li><a href="#">Servicios</a></li><br>
-            <li><a href="../contacto/contacto.php">Contactanos</a></li><br>
+            <li><a href="#">Contactanos</a></li><br>
           </ul>
         </nav>
       </div>

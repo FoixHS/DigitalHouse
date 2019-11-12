@@ -47,11 +47,11 @@ header{
     text-decoration: none;
     color: black;
   }
-  
+
   body{
    /* background-image: url("img/bg-body.jpg");*/
-   background: url(../../login2.0/img/bg3.png);
-    background-size: contain;
+   background: url(login/img/bg2.png);
+    background-size: cover;
     background-position: center;
     font-family: 'Comfortaa', cursive;
   }

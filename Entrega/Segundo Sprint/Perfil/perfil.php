@@ -10,7 +10,7 @@ foreach ($arrayDeUsuarios as $usuario) {
     $usuarioLogueado = $usuario;
     break;
   }else{
-    header("Location:../login/login.php");
+    siNoEstaLogueado();
   }
 }
 
