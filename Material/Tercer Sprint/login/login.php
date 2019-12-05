@@ -93,13 +93,14 @@ foreach ($arrayDeUsuarios as $usuario) {
             <span style="color: red"><?=$errorLogin?></span>
             <input type="email" name="email" placeholder="Email" /> <span><?=$errorEmail?></span>
             <input type="password" name="password" placeholder="Contraseña" />
-            <!--<div class="Recordarme"> 
+            <div class="Recordarme">
                         <input name="recordarUsuario" id="recordarUsuario" type="checkbox" value="recordarUsuario">
-                        <label class="recordarme">Recordarme</label> -->
+                        <label class="recordarme">Recordarme</label>
+            </div>
             <a href="#">Olvidaste tu contraseña?</a>
-            <button>Iniciar Sesión</button>
+            <button type="submit">Iniciar Sesión</button>
           </form>
-        </div>
+
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
