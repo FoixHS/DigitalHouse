@@ -2,8 +2,15 @@
 <?php
 session_start();
 require_once '../funciones.php';
+require_once '../Clases/DatabaseMYSQL.php';
+require_once '../Clases/Usuario.php';
 
-$arrayDeUsuarios = traerArrayDeUsuarios();
+$bd = new DatabaseMYSQL;
+$usuario = $bd->traerUsuario($_SESSION["id"]);
+
+
+
+/* $arrayDeUsuarios = traerArrayDeUsuarios();
 
 foreach ($arrayDeUsuarios as $usuario) {
   if($usuario["email"]==$_SESSION["usuario_logueado"]){
@@ -15,7 +22,7 @@ foreach ($arrayDeUsuarios as $usuario) {
 }
 
 $emailCorto = substr_replace($usuarioLogueado["email"] ,"",-4);
-
+*/
  ?>
 <html lang="en">
 <head>
@@ -60,14 +67,14 @@ $emailCorto = substr_replace($usuarioLogueado["email"] ,"",-4);
   <main>
       <div class="container">
           <div class="avatar">
-            <img src="../avatar/<?=$usuarioLogueado["avatar"]?>" alt="Foto de perfil" style="width:200px;">
+            <img src="../avatar/<?=$usuario["avatar"]?>" alt="Foto de perfil" style="width:200px;">
           </div>
-          <h1>Nombre: <?=$usuarioLogueado["nombre"]?></h1>
-          <h1>Email: <?=$usuarioLogueado["email"]?></h1>
+          <h1>Nombre: <?=$usuario["nombre"]?></h1>
+          <h1>Email: <?=$usuario["email"]?></h1>
           <form class="" id="nuevo-posteo" action="../Home/nuevoposteo.php" method="post">
             <button type="submit" name="button">Nuevo posteo</button>
           </form>
-          <form class="" id="editar-perfil" action="../perfil/editarperfil.php" method="post">
+          <form class="" id="editar-perfil" action="../perfil/editarperfil.php" method="get">
             <button type="submit" name="button">Editar Perfil</button>
           </form>
           <form class="logout" id="logout" action="../logout.php" method="post">

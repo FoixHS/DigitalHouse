@@ -81,8 +81,8 @@ if($_POST){
     $datosEnJSON = json_encode($arrayDeUsuarios);
     file_put_contents("../usuarios.json", $datosEnJSON);
 
-    include '../Clases/DatabaseMYSQL.php';
-    include '../Clases/Usuario.php';
+    require_once '../Clases/DatabaseMYSQL.php';
+    require_once '../Clases/Usuario.php';
 
         //genero una base de datos
         $bd = new DatabaseMYSQL;

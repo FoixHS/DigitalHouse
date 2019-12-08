@@ -3,10 +3,15 @@
 session_start();
 require_once '../funciones.php';
 include('posteos.php');
+require_once '../Clases/DatabaseMYSQL.php';
+require_once '../Clases/Usuario.php';
+
+$bd = new DatabaseMYSQL;
+$usuario = $bd->traerUsuario($_SESSION["id"]);
 
 $arrayDeUsuarios = traerArrayDeUsuarios();
 
-siNoEstaLogueado();
+/* siNoEstaLogueado(); */
 
 var_dump($_SESSION);
  ?>
@@ -50,7 +55,7 @@ var_dump($_SESSION);
           </div>
           <div class="login">
             <div class="links">
-              <a href="../perfil/perfil.php">Mi Perfil: <?=$_SESSION["usuario_logueado"]?></a>
+              <a href="../perfil/perfil.php">Mi Perfil: <?=$usuario['email']?></a>
             </div>
 
           </div>

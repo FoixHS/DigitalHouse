@@ -35,10 +35,13 @@ class DatabaseMYSQL extends Database
 
 		}
 
-    public function actualizarUsuario($nombre,$email){
-        $consulta = $this->conexion->prepare("UPDATE usuarios SET nombre = '".$nombre."' , email = '".$email."' WHERE id = ".$_SESSION["user_id"]);
+    public function actualizarUsuario($nombre,$apellido,$email,$emailcorto){
+        $consulta = $this->conexion->prepare("UPDATE usuarios SET nombre = '".$nombre."' , apellido = '".$apellido."', email = '".$email."',avatar = '".$emailcorto."'  WHERE id = ".$_SESSION["id"]);
         $consulta->execute();
+        var_dump($consulta);
     }
+
+
 
 }
 ?>
