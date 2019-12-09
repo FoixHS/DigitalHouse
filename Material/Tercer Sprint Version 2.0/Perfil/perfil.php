@@ -9,20 +9,6 @@ $bd = new DatabaseMYSQL;
 $usuario = $bd->traerUsuario($_SESSION["id"]);
 
 
-
-/* $arrayDeUsuarios = traerArrayDeUsuarios();
-
-foreach ($arrayDeUsuarios as $usuario) {
-  if($usuario["email"]==$_SESSION["usuario_logueado"]){
-    $usuarioLogueado = $usuario;
-    break;
-  }else{
-    siNoEstaLogueado();
-  }
-}
-
-$emailCorto = substr_replace($usuarioLogueado["email"] ,"",-4);
-*/
  ?>
 <html lang="en">
 <head>

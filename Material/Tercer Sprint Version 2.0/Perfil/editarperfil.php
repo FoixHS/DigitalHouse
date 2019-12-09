@@ -4,11 +4,15 @@ session_start();
 require_once '../funciones.php';
 require_once '../Clases/DatabaseMYSQL.php';
 require_once '../Clases/Usuario.php';
+require_once '../Clases/DatabaseJSON.php';
 
 $bd = new DatabaseMYSQL;
 $usuario = $bd->traerUsuario($_SESSION["id"]);
 
-$arrayDeUsuarios = traerArrayDeUsuarios();
+$json = new DatabaseJSON;
+$usuariosPHP = $json->traerUsuariosPHP();
+
+$usuarioLogueado = $json->encontrarUsuario($usuariosPHP,$_SESSION['usuario_logueado']);
 
 $errorNombre = "";
 $errorEmail = "";
@@ -57,42 +61,14 @@ if($_POST){
   }
 $avatar=$emailCorto .".". $ext;
   if(!$errores){
-  /*  $arrayDeUsuarios = traerArrayDeUsuarios();
-    $nuevoUsuario = [
-      "nombre" => $nombre,
-      "email" => $email,
-      "avatar" => $emailCorto .".". $ext,
-      "contrasenia" => password_hash($pass1, PASSWORD_DEFAULT),
-      "repetirContrasenia" => password_hash($pass2, PASSWORD_DEFAULT)
-    ];
-    $arrayDeUsuarios[] = $nuevoUsuario;
-    $datosEnJSON = json_encode($arrayDeUsuarios);
-    file_put_contents("../usuarios.json", $datosEnJSON);
 
-*/
           $bd->actualizarUsuario($nombre,$apellido,$email,$avatar);
+          $json->actualizarJSON($nombre,$apellido,$email,$avatar);
+   $_SESSION["usuario_logueado"] = $email;
 
-  //  $_SESSION["usuario_logueado"] = $usuarioId;
-    header("Location:../Home/index.php");
-  }
-
-}
-
-
-/*
-
- foreach ($arrayDeUsuarios as $usuario) {
-  if($usuario["email"]==$_SESSION["usuario_logueado"]){
-    $usuarioLogueado = $usuario;
-    break;
-  }else{
-    siNoEstaLogueado();
+  //  header("Location:../Home/index.php");
   }
 }
-
-*/
-
-
 
  ?>
 

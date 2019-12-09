@@ -2,24 +2,32 @@
 <?php
 session_start();
 require_once '../funciones.php';
-  soloSiEstaLogueado();
+require_once '../Clases/DatabaseMYSQL.php';
+require_once '../Clases/Usuario.php';
+require_once '../Clases/DatabaseJSON.php';
+
+soloSiEstaLogueado();
+
 $errorLogin = "";
-$arrayDeUsuarios = traerArrayDeUsuarios();
+$arrayDeUsuarios = traerArrayDeUsuarios('usuarios.json');
 $errorEmail = "";
 
 if($_POST){
 $email = $_POST["email"];
-$pass = $_POST["password"];
+$pass1 = password_hash($_POST["password"], PASSWORD_DEFAULT);
+$bd = new DatabaseMYSQL;
+$usuario = $bd->chequearUsuario($email, $pass1);
 
-foreach ($arrayDeUsuarios as $usuario) {
+/* foreach ($arrayDeUsuarios as $usuario) {
    if($usuario["email"] == $email && password_verify($pass, $usuario["contrasenia"])){
       $_SESSION["usuario_logueado"] = $email;
+
       header("Location:../Home/index.php");
 
    } else{
      $errorLogin = "*El email o la contraseña son incorrectas";
    }
-}
+} */
 }
 
 

@@ -14,8 +14,8 @@ $email = "";
 $errores =false;
 if($_POST){
   $nombre = $_POST["nombre"];
-  $email = $_POST["email"];
   $apellido = $_POST["apellido"];
+  $email = $_POST["email"];
   $pass1 = $_POST["pass1"];
   $pass2 = $_POST["pass2"];
   $avatar = $_FILES["avatar"]["name"];
@@ -69,17 +69,11 @@ if($_POST){
   }
 
   if(!$errores){
-    $arrayDeUsuarios = traerArrayDeUsuarios();
-    $nuevoUsuario = [
-      "nombre" => $nombre,
-      "email" => $email,
-      "avatar" => $emailCorto .".". $ext,
-      "contrasenia" => password_hash($pass1, PASSWORD_DEFAULT),
-      "repetirContrasenia" => password_hash($pass2, PASSWORD_DEFAULT)
-    ];
-    $arrayDeUsuarios[] = $nuevoUsuario;
-    $datosEnJSON = json_encode($arrayDeUsuarios);
-    file_put_contents("../usuarios.json", $datosEnJSON);
+    require_once '../Clases/DatabaseJSON.php';
+    $avatar = $emailCorto .".". $ext;
+    $json = new DatabaseJSON;
+    $json->guardarUsuario($nombre,$apellido,$email,$pass1,$avatar);
+
 
     require_once '../Clases/DatabaseMYSQL.php';
     require_once '../Clases/Usuario.php';
@@ -92,8 +86,8 @@ if($_POST){
         $usuarioId = $bd->guardarUsuario($usuarioNuevo);
         $_SESSION["id"] = $usuarioId;
 
-  //  $_SESSION["usuario_logueado"] = $usuarioId;
-    header("Location:../login/login.php");
+
+    header("Location:../home/index.php");
   }
 
 }

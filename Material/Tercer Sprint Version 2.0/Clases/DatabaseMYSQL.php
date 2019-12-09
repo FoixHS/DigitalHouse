@@ -31,6 +31,15 @@ class DatabaseMYSQL extends Database
         return $usuario;
     }
 
+    public function chequearUsuario($email, $pass1){
+        $consulta = $this->conexion->query("SELECT id FROM usuarios WHERE email = '$email' and pass = '$pass1'");
+        $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
+
+        var_dump($consulta);
+        exit;
+
+    }
+
 		public function borrarUsuario(){
 
 		}
@@ -38,7 +47,6 @@ class DatabaseMYSQL extends Database
     public function actualizarUsuario($nombre,$apellido,$email,$emailcorto){
         $consulta = $this->conexion->prepare("UPDATE usuarios SET nombre = '".$nombre."' , apellido = '".$apellido."', email = '".$email."',avatar = '".$emailcorto."'  WHERE id = ".$_SESSION["id"]);
         $consulta->execute();
-        var_dump($consulta);
     }
 
 
