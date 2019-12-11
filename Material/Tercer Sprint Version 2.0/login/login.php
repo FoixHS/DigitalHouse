@@ -14,20 +14,19 @@ $errorEmail = "";
 
 if($_POST){
 $email = $_POST["email"];
-$pass1 = password_hash($_POST["password"], PASSWORD_DEFAULT);
+$pass1 = $_POST["password"];
 $bd = new DatabaseMYSQL;
-$usuario = $bd->chequearUsuario($email, $pass1);
-
-/* foreach ($arrayDeUsuarios as $usuario) {
-   if($usuario["email"] == $email && password_verify($pass, $usuario["contrasenia"])){
+// $usuario = $bd->chequearUsuario($email);
+foreach ($arrayDeUsuarios as $usuario) {
+   if($usuario["email"] == $email && password_verify($pass1, $usuario["pass"])){
       $_SESSION["usuario_logueado"] = $email;
 
       header("Location:../Home/index.php");
 
-   } else{
-     $errorLogin = "*El email o la contraseña son incorrectas";
-   }
-} */
+         } else{
+           $errorLogin = "*El email o la contraseña son incorrectas";
+         }
+     }
 }
 
 

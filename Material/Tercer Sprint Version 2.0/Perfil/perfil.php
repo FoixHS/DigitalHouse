@@ -57,11 +57,11 @@ $usuario = $bd->traerUsuario($_SESSION["id"]);
           </div>
           <h1>Nombre: <?=$usuario["nombre"]?></h1>
           <h1>Email: <?=$usuario["email"]?></h1>
-          <form class="" id="nuevo-posteo" action="../Home/nuevoposteo.php" method="post">
-            <button type="submit" name="button">Nuevo posteo</button>
-          </form>
           <form class="" id="editar-perfil" action="../perfil/editarperfil.php" method="get">
             <button type="submit" name="button">Editar Perfil</button>
+          </form>
+          <form class="" id="nuevo-posteo" action="../Perfil/eliminar.php" method="post">
+            <button type="submit" name="button">Eliminar perfil</button>
           </form>
           <form class="logout" id="logout" action="../logout.php" method="post">
             <button type="submit" name="button">Cerrar Sesion</button>

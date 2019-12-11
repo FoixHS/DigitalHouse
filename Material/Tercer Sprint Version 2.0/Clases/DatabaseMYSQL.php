@@ -12,7 +12,7 @@ class DatabaseMYSQL extends Database
         $opciones = array(
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
         );
-
+        $con = mysqli_connect('localhost', 'root', '', 'redanimal');
         $this->conexion = new PDO($dsn, $nombre_usuario, $contrasenia, $opciones);
     }
 
@@ -31,17 +31,16 @@ class DatabaseMYSQL extends Database
         return $usuario;
     }
 
-    public function chequearUsuario($email, $pass1){
-        $consulta = $this->conexion->query("SELECT id FROM usuarios WHERE email = '$email' and pass = '$pass1'");
+    public function chequearUsuario($email){
+      $consulta = $this->conexion->query("SELECT id FROM usuarios WHERE email = '$email'");
         $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
-        var_dump($consulta);
-        exit;
 
     }
 
-		public function borrarUsuario(){
-
+		public function borrarUsuario($id){
+      $consulta = $this->conexion->prepare("DELETE FROM usuarios  WHERE id = ".$id);
+      $consulta->execute();
 		}
 
     public function actualizarUsuario($nombre,$apellido,$email,$emailcorto){
