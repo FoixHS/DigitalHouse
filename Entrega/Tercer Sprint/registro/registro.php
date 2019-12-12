@@ -3,6 +3,9 @@
 
 session_start();
 require_once '../funciones.php';
+require_once '../Clases/DatabaseMYSQL.php';
+require_once '../Clases/Usuario.php';
+
 //    soloSiEstaLogueado();
 $errorNombre = "";
 $errorEmail = "";
@@ -13,6 +16,8 @@ $nombre = "";
 $email = "";
 $errores =false;
 if($_POST){
+
+  $bd = new DatabaseMYSQL;
   $nombre = $_POST["nombre"];
   $apellido = $_POST["apellido"];
   $email = $_POST["email"];
@@ -27,13 +32,22 @@ if($_POST){
     $errores = true;
   }
 
+$usuario=$bd->chequearUsuario($email);
+
   if($email == ""){
     $errorEmail = "*El email es obligatorio";
     $errores = true;
   } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
     $errorEmail = "*Se requiere formato de email";
     $errores = true;
-  }/*else if(validarEmail($email)){
+  }else if ($usuario!=null){
+    $errorEmail = "*El email ya ha sido utilizado";
+    $errores = true;
+  }
+
+
+
+  /*else if(validarEmail($email)){
     $errorEmail = "*El email ya fue utilizado";
     $errores = true;
   }*/
@@ -75,11 +89,9 @@ if($_POST){
     $json->guardarUsuario($nombre,$apellido,$email,$pass1,$avatar);
 */
 
-    require_once '../Clases/DatabaseMYSQL.php';
-    require_once '../Clases/Usuario.php';
 
         //genero una base de datos
-        $bd = new DatabaseMYSQL;
+
         //genero un nuevo usuario
         $usuarioNuevo = new Usuario($_POST["email"],$_POST["nombre"], $_POST["apellido"],password_hash($_POST["pass1"],PASSWORD_DEFAULT),$emailCorto .".". $ext);
         //le paso el nuevo usuario a la base de datos
