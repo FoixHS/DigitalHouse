@@ -9,11 +9,11 @@ require_once '../Clases/DatabaseJSON.php';
 $bd = new DatabaseMYSQL;
 $usuario = $bd->traerUsuario($_SESSION["id"]);
 
-$json = new DatabaseJSON;
+/*$json = new DatabaseJSON;
 $usuariosPHP = $json->traerUsuariosPHP();
 
 $usuarioLogueado = $json->encontrarUsuario($usuariosPHP,$_SESSION['usuario_logueado']);
-
+*/
 $errorNombre = "";
 $errorEmail = "";
 $errorPass1 = "";
@@ -47,7 +47,8 @@ if($_POST){
     $errores = true;
   }
 
-  if($_FILES){
+  if($_FILES["avatar"]["name"]!=""){
+
     if($_FILES["avatar"]["error"]!=0){
       $errorFoto="Hubo un error al cargar la foto";
     }else{
@@ -55,18 +56,18 @@ if($_POST){
       if($ext!="jpg" && $ext!="jpeg" && $ext!="png"){
         $errorFoto="La foto debe ser un archivo jpg, jpeg o png";
       }else{
-        move_uploaded_file($_FILES["avatar"]["tmp_name"], "../avatar/$emailCorto." . $ext);
+        $avatar=$emailCorto .".". $ext;
+        move_uploaded_file($_FILES["avatar"]["tmp_name"], "../avatar/".$avatar);
       }
     }
   }
-$avatar=$emailCorto .".". $ext;
+
   if(!$errores){
 
-          $bd->actualizarUsuario($nombre,$apellido,$email,$avatar);
-          $json->actualizarJSON($nombre,$apellido,$email,$avatar);
+         $bd->actualizarUsuario($nombre,$apellido,$email,$avatar);
+        //  $json->actualizarJSON($nombre,$apellido,$email,$avatar);
    $_SESSION["usuario_logueado"] = $email;
-
-  //  header("Location:../Home/index.php");
+   header("Location:../perfil/editarperfil.php");
   }
 }
 
